@@ -1,0 +1,234 @@
+@charset "UTF-8";
+/* Variáveis globais */
+/* Mixins */
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  background-color: black;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+/* Header */
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding-top: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.titulo {
+  font-size: 4rem;
+  color: white;
+}
+
+.imagem-centralizada {
+  max-width: 20%;
+  height: auto;
+}
+
+/* Links */
+.links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 15px;
+}
+.links a {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  transition: color 0.3s ease;
+}
+.links a:hover {
+  color: blue;
+}
+
+/* Imagens */
+.imagem {
+  margin-top: 35px;
+  max-width: 80%;
+  height: auto;
+  border-radius: 30px;
+  border: 1px solid white;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Curiosidades */
+.curiosidades {
+  color: white;
+  margin: 30px;
+  margin-left: 60px;
+}
+.curiosidades h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.texto {
+  flex: 1;
+  min-width: 300px;
+}
+.texto p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.imagem-curiosidades {
+  max-width: 40%;
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+  border: 1px solid white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Curiosidades-2 */
+.curiosidades-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  color: white;
+  margin: 30px;
+}
+.curiosidades-2 h2 {
+  margin-left: 70px;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.curiosidades-2 .conteudo {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Concorrentes */
+.concorrentes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+  width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+}
+.concorrentes img {
+  width: 20%;
+  height: auto;
+  object-fit: cover;
+}
+
+.fotos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  width: 100vw;
+}
+.fotos img {
+  width: 80%;
+  height: auto;
+  margin-bottom: 20px;
+  max-height: 100vh;
+  object-fit: contain;
+}
+
+/* Botões */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+}
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+.button button {
+  background-color: white;
+  color: black;
+  font-size: 1.5rem;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.button button:hover {
+  background-color: darkblue;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 0;
+  background-color: black;
+  border-top: 2px solid white;
+}
+footer img {
+  width: 50px;
+  height: auto;
+}
+
+/*# sourceMappingURL=styles.css.map */

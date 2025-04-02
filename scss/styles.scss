@@ -1,0 +1,212 @@
+/* Variáveis globais */
+$background-color: black;
+$text-color: white;
+$primary-color: #007bff;
+$hover-color: #0056b3;
+$border-radius: 30px;
+$font-family: Arial, sans-serif;
+
+/* Mixins */
+@mixin flex-center($direction: row, $gap: 0) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+    justify-content: center;
+    gap: $gap;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    @include flex-center(column);
+    background-color: $background-color;
+    font-family: $font-family;
+    color: $text-color;
+}
+
+/* Header */
+header {
+    width: 100%;
+    @include flex-center(column);
+    padding-top: 20px;
+}
+
+.container {
+    @include flex-center(row, 10px);
+}
+
+.titulo {
+    font-size: 4.0rem;
+    color: $text-color;
+}
+
+.imagem-centralizada {
+    max-width: 20%;
+    height: auto;
+}
+
+/* Links */
+.links {
+    @include flex-center(row, 50px);
+    margin-top: 15px;
+    
+    a {
+        color: $text-color;
+        text-decoration: none;
+        font-size: 2.0rem;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: blue;
+        }
+    }
+}
+
+/* Imagens */
+.imagem {
+    margin-top: 35px;
+    max-width: 80%;
+    height: auto;
+    border-radius: $border-radius;
+    border: 1px solid $text-color;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Curiosidades */
+.curiosidades {
+    color: $text-color;
+    margin: 30px;
+    
+    h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+}
+
+.conteudo {
+    @include flex-center(row, 20px);
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.texto {
+    flex: 1;
+    min-width: 300px;
+
+    p {
+        font-size: 1.5rem;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+}
+
+.imagem-curiosidades {
+    max-width: 40%;
+    width: 100%;
+    height: auto;
+    border-radius: $border-radius;
+    border: 1px solid $text-color;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Curiosidades-2 */
+.curiosidades-2 {
+    @include flex-center(column);
+    color: $text-color;
+    margin: 30px;
+    
+    h2 {
+        margin-left: 70px;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
+
+.curiosidades-2 .conteudo {
+    @include flex-center(row-reverse, 20px);
+}
+
+/* Concorrentes */
+.concorrentes {
+    @include flex-center(row);
+    flex-wrap: wrap;
+    width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+
+    img {
+        width: calc(100% / 5);
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+.fotos {
+    @include flex-center(column);
+    width: 100vw;
+    
+    img {
+        width: 80%;
+        height: auto;
+        margin-bottom: 20px;
+        max-height: 100vh;
+        object-fit: contain;
+    }
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: $primary-color;
+    color: $text-color;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    
+    &:hover {
+        background-color: $hover-color;
+    }
+}
+
+.button {
+    @include flex-center(row);
+    
+    button {
+        background-color: $text-color;
+        color: $background-color;
+        font-size: 1.5rem;
+        padding: 10px 10px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-weight: bold;
+
+        &:hover {
+            background-color: darkblue;
+        }
+    }
+}
+
+/* Footer */
+footer {
+    @include flex-center(row, 20px);
+    padding: 10px 0;
+    background-color: $background-color;
+    border-top: 2px solid $text-color;
+
+    img {
+        width: 50px;
+        height: auto;
+    }
+}
